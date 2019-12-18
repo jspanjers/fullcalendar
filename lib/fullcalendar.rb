@@ -13,7 +13,7 @@ module Fullcalendar
         register_sprockets
       end
 
-      configure_sass
+      configure_sassc
     end
 
     # Paths
@@ -48,10 +48,8 @@ module Fullcalendar
 
     private
 
-    def configure_sass
-      require 'sass'
-
-      ::Sass.load_paths << stylesheets_path
+    def configure_sassc
+      ::SassC.load_paths << stylesheets_path
     end
 
     def register_rails_engine
